@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.UserController">
+    <TextField fx:id="idField" promptText="ID" />
+    <TextField fx:id="nameField" promptText="Name" />
+    <TextField fx:id="emailField" promptText="Email" />
+    <Button text="Add User" onAction="#handleAddUser" />
+    <Button text="Update User" onAction="#handleUpdateUser" />
+    <Button text="Delete User" onAction="#handleDeleteUser" />
+    <Button text="View Users" onAction="#handleViewUsers" />
+    <TextArea fx:id="outputArea" prefHeight="200" prefWidth="300" />
+</VBox>
