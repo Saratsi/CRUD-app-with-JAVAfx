@@ -31,6 +31,11 @@ public class UserController  {
         }
         String name = nameField.getText();
         String email = emailField.getText();
+        if(name.isEmpty() || email.isEmpty())
+        {
+            outputArea.setText("Name field and Email field must be filled");
+            return;
+        }
         boolean success = InsertUser.addUser(name,email);
         outputArea.setText(success ? "User added!" : "Error adding user");
     }
@@ -99,3 +104,4 @@ public class UserController  {
         }
     }
 }
+
