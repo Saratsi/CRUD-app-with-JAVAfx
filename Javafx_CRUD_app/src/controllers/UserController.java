@@ -26,7 +26,7 @@ public class UserController  {
         String id = idField.getText();
         if(!id.isEmpty())
         {
-            outputArea.setText("ID filled must be empty when you add a user.\nThe ID is auto incremented.");
+            outputArea.setText("ID field must be empty when you add a user.\nThe ID is auto incremented.");
             return;
         }
         String name = nameField.getText();
@@ -90,7 +90,7 @@ public class UserController  {
             int id = Integer.parseInt(idField.getText());
             String name = nameField.getText();
             String email = emailField.getText();
-            if(!name.isEmpty() && !email.isEmpty())
+            if(!name.isEmpty() || !email.isEmpty())
             {
                 outputArea.setText("When deleting a user only ID must be filled.\nEverything else is deleted automatically.");
                 return;
@@ -104,4 +104,5 @@ public class UserController  {
         }
     }
 }
+
 
