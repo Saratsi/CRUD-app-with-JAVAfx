@@ -74,11 +74,11 @@ public class UserController  {
             String name = nameField.getText();
             String email = emailField.getText();
             boolean success = UpdateUser.updateUser(id,name,email);
-            outputArea.setText(success ? "User updated" : "Error");
+            outputArea.setText(success ? "User updated" : "This ID does not exist");
         }
         catch(NumberFormatException e)
         {
-            outputArea.setText("Enter valid ID in Name field");
+            outputArea.setText("ID must be Integer");
         }
     }
 
@@ -96,13 +96,14 @@ public class UserController  {
                 return;
             }
             boolean success = DeleteUser.deleteUser(id);
-            outputArea.setText(success ? "User deleted" : "Error");
+            outputArea.setText(success ? "User deleted" : "This ID does not exist");
         }
         catch(NumberFormatException e)
         {
-            outputArea.setText("Enter valid ID");
+            outputArea.setText("ID must be Integer");
         }
     }
 }
+
 
 
